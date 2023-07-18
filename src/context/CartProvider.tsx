@@ -17,6 +17,8 @@ const initCartContext: cartType = {
         total_unique_items: 0,
         subtotal: {
             raw: 0,
+            formatted: '',
+            formatted_with_code: '',
             formatted_with_symbol: ''
         },
         hosted_checkout_url: '',
@@ -38,6 +40,8 @@ const CartProvider = ({children}: childrenType): ReactElement => {
         total_unique_items: 0,
         subtotal: {
             raw: 0,
+            formatted: '',
+            formatted_with_code: '',
             formatted_with_symbol: ''
         },
         hosted_checkout_url: '',
