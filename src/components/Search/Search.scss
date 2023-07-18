@@ -1,0 +1,130 @@
+%product-card{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background: var(--white-color);
+    left: 0;
+    top: 43px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    max-height: 90vh;
+    overflow-y: scroll;
+}
+
+%product-card-hidden{
+    display: none;
+}
+
+.search-modul{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.5);
+
+    .search-bar{
+        height: 10vh;
+        width: 100%;
+        background: var(--white-color);
+        gap: 10px;
+
+        svg{
+            font-size: 25px;
+        }
+
+        .align-items{
+            position: relative;
+            width: 40%;
+            border: 2px solid #000000;
+            padding: 10px;
+            border-radius: 6px;
+
+            input{
+                width: 100%;
+                border: none;
+                outline: none;
+            }
+
+            .product-card{
+                @extend %product-card;
+
+                @media screen and (max-width: 500px){
+                    display: none;
+                }
+            }
+
+            .product-card.hidden{
+                @extend %product-card-hidden
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 80%;
+            }
+            @media screen and (max-width: 550px) {
+                width: 80%;
+            }
+        }
+    }
+
+    .product-card-mobile{
+        @extend %product-card;
+        display: none;
+        position: relative;
+        padding: 10px;
+        top: 0;
+        border: none;
+        border-radius: 0;
+        overflow-y: scroll;
+
+        @media screen and (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .product-card-mobile.hidden{
+        @extend %product-card-hidden
+    }
+}
+
+.search-modul.flex{
+    display: flex;
+}
+
+.search-item{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    gap: 10px;
+    padding: 10px 20px;
+
+    &:hover{
+        background: var(--gray-line);
+
+        span{
+            text-decoration: underline;
+        }
+    }
+
+    img{
+        width: 60px;
+        object-fit: cover;
+    }
+}
+
+.search-title {
+    padding: 20px;
+    color: var(--gray-color);
+    font-size: 14px;
+    
+    p{
+        border-bottom: 1px solid var(--gray-line);
+        padding-bottom: 10px;
+    }
+}

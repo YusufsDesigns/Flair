@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lato&display=swap');
+
+:root {
+  --white-color: #ffffff;
+  --gray-color: #686868;
+  --gray-line: #eaeaea;
+  --disabled: #bab8b8;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.price{
+  font-family: 'Lato', sans-serif;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-items{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.justify-content{
+  display: flex;
+  justify-content: center;
+}
+
+.spinner{
+  flex: 3;
+  display: grid;
+  place-content: center;
+}
+
+.lds-ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  }
+
+  .lds-ring.small{
+    height: 0;
+  }
+
+  
+
+  .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  /* margin: 8px; */
+  border: 3px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+  }
+
+  .lds-ring.small div{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .lds-ring.small .disabled{
+    border: 3px solid var(--disabled);
+    border-color: var(--disabled) transparent transparent transparent;
+  }
+
+  .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+  }
+
+  .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+  }
+
+  .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+  }
+
+  @keyframes lds-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  }
+
+  @media screen and (max-width: 500px){
+    .container {
+      padding: 0 1rem;
+    }
+  }

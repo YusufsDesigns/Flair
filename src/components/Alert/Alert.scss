@@ -1,0 +1,35 @@
+.alert{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 6px;
+    color: #fff;
+    transform: translateX(0px);
+
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        gap: 5px;
+    }
+
+    @media screen and (max-width: 440px) {
+        max-width: 320px;
+    }
+}
+
+.alert.hidden{
+    transform: translateX(1000px);
+}

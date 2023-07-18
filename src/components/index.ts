@@ -1,0 +1,7 @@
+export { default as Navbar } from './Navbar/Navbar'
+export { default as Footer } from './Footer/Footer'
+export { default as Search } from './Search/Search'
+export { default as Products } from './Products/Products'
+export { default as ImageGallery } from './ImageGallery/ImageGallery'
+export { default as Alert } from './Alert/Alert'
+export { default as Loader } from './Loader'

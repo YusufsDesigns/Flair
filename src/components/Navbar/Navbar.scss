@@ -1,0 +1,39 @@
+.navbar{
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .logo{
+        text-decoration: none;
+        color: #000;
+
+        img{
+            width: 40px;
+        }
+
+        span{
+            font-size: 25px;
+            font-weight: 500;
+        }
+    }
+
+    .nav-icons{
+        gap: 25px;
+        
+        svg{
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    
+}
+
+
+
